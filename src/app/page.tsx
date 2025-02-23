@@ -1,12 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import "./App.css";
-import { Avjobs } from "./comp/jobcard";
-import { Searchbar } from "./comp/Searchbar";
-import { Displayjobs } from "./comp/DisplayJobs";
-import  SignUpForm from "./signup/page";
-import JobsHome from "./jobs/page";
-import DarkModeToggle from "react-dark-mode-toggle"
 
 
 export default function Home() {

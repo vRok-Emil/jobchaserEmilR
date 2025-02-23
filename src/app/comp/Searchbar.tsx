@@ -8,8 +8,6 @@ interface SearchbarProps {
 }
 
 export const Searchbar: React.FC<SearchbarProps> = ({
-  searchWord,
-  setSearchWord,
   searchFunction
 }) => {
   return (

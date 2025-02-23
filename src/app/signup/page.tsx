@@ -1,7 +1,6 @@
 "use client"
 import { useForm, SubmitHandler } from "react-hook-form"
-import DarkModeToggle from "react-dark-mode-toggle"
-import { useState } from "react"
+
 
 interface IFormInput {
   userName: string,
@@ -13,7 +12,6 @@ interface IFormInput {
 export default function SignUpForm() {
    const { register, handleSubmit } = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
-    const [darkMode, etDarkMode] = useState(true);
     return (
       
       <div className="FormForLogIn">

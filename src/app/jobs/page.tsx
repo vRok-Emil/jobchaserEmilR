@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Avjobs } from "../comp/jobcard";
-import { Searchbar } from "../comp/Searchbar";
+
 import { Displayjobs } from "../comp/DisplayJobs";
 
 export default function JobsHome() {
   const [jobsData, setJobsData] = useState<Avjobs[]>([]);
-  const [searchWord, setSearchWord] = useState<string>("");
+ 
 
   useEffect(() => {
     async function fetchJobs() {
@@ -25,13 +25,15 @@ export default function JobsHome() {
       }
     }
 
-    fetchJobs();
+    if (typeof window !== "undefined") {
+      fetchJobs();
+    }
   }, []);
 
   return (
     <div>
       
-      <Displayjobs searchWord={searchWord} jobs={jobsData} />
+      <Displayjobs searchWord={""} jobs={jobsData} />
     </div>
   );
 }

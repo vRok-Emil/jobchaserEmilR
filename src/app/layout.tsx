@@ -30,17 +30,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <DarkModeProvider>
     <Provider store={store}>
       <html lang="en">
         <body>
-          <DarkModeProvider>
             <BodyWrapper>
               <Nav />
               {children}
             </BodyWrapper>
-          </DarkModeProvider>
         </body>
       </html>
     </Provider>
+    </DarkModeProvider>
   );
 }

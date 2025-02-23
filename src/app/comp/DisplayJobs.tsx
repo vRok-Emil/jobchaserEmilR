@@ -3,7 +3,6 @@ import { Avjobs } from "./jobcard";
 import AllJobs from "./jobcard";
 import { useSelector, useDispatch } from "react-redux";
 import { setName, setJobs, selectJobs } from "@/app/Redux/counter";
-import { RootState } from "../Redux/store";
 import { useEffect } from "react";
 import { Searchbar } from "./Searchbar";
 
@@ -14,7 +13,7 @@ interface DisplayJobProps {
 //display jobs funktionen tar in två props från displayjobs
 //const filter filtrar jobben baserat på vad sök ordet är
 
-export function Displayjobs({ searchWord, jobs }: DisplayJobProps) {
+export function Displayjobs({ }: DisplayJobProps) {
   const dispatch = useDispatch();
   const newFilterJobs = useSelector(selectJobs);
   useEffect(() => {
